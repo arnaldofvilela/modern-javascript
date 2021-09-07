@@ -1,12 +1,29 @@
-const name = 'shaun';
+// callbacks & foreach
 
-// functions
+// const myFunc = (callbackFunc) => {
+//     // do something
+//     let value = 50;
+//     callbackFunc(value);
+// };
 
-const greet = () => 'hello';
+// myFunc(value => {
+//     // do something
+//     console.log(value);
+// });
 
-let resultOne = greet();
-console.log(resultOne);
+//bkp orig version
+// myFunc(function(value){
+//     // do something
+//     console.log(value);
+// });
 
-// methods
-let resultTwo = name.toUpperCase();
-console.log(resultTwo);
+
+
+// callbacks & foreach
+let people = ['mario','luigi', 'ryu','shaun','chun-li'];
+
+const logPerson = (person, index) => {
+    console.log(`${index} - hello ${person}`);
+}
+
+people.forEach(logPerson);
