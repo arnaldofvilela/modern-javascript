@@ -1,29 +1,15 @@
-// callbacks & foreach
+// get a reference to the 'ul'
 
-// const myFunc = (callbackFunc) => {
-//     // do something
-//     let value = 50;
-//     callbackFunc(value);
-// };
+const ul = document.querySelector('.people');
 
-// myFunc(value => {
-//     // do something
-//     console.log(value);
-// });
-
-//bkp orig version
-// myFunc(function(value){
-//     // do something
-//     console.log(value);
-// });
-
-
-
-// callbacks & foreach
 let people = ['mario','luigi', 'ryu','shaun','chun-li'];
 
-const logPerson = (person, index) => {
-    console.log(`${index} - hello ${person}`);
-}
+let html = ``;
 
-people.forEach(logPerson);
+people.forEach(person => {
+    // create html template
+    html += `<li style="color: purple">${person}</li>`;
+})
+
+console.log(html);
+ul.innerHTML = html;
