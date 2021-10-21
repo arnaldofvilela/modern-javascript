@@ -1,14 +1,10 @@
-// get an element by ID
-// const title = document.getElementById('page-title');
-// console.log(title);
+const title = document.querySelector('h1');
 
-// get elements by their class name
-// const errors = document.getElementsByClassName('error');
-// console.log(errors);
-// console.log(errors[0]);
+//title.setAttribute('style', 'margin: 50px;');
 
-
-// get elements by their tag name
-const paras = document.getElementsByTagName('p');
- console.log(paras);
- console.log(paras[1]);
+console.log(title.style);
+console.log(title.style.color); 
+title.style.margin = '50px';
+title.style.color = 'crimson';
+title.style.fontSize = '60px';
+title.style.margin = '';
