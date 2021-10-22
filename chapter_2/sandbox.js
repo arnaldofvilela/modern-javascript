@@ -1,10 +1,28 @@
-const title = document.querySelector('h1');
+// const content = document.querySelector('p');
 
-//title.setAttribute('style', 'margin: 50px;');
+// console.log(content.classList);
+// content.classList.add('error');
+// content.classList.remove('error');
+// content.classList.add('success');
 
-console.log(title.style);
-console.log(title.style.color); 
-title.style.margin = '50px';
-title.style.color = 'crimson';
-title.style.fontSize = '60px';
-title.style.margin = '';
+
+const paras = document.querySelectorAll('p');
+console.log(paras);
+
+paras.forEach(p => {
+    // all the text that is visible
+    // console.log(p.innerText);
+    // console.log(p.textContent);
+
+if(p.textContent.includes('error')){
+    p.classList.add('error');
+}
+if(p.innerText.includes('success')){
+    p.classList.add('success');
+}
+});
+
+const title = document.querySelector('.title');
+
+title.classList.toggle('test'); 
+title.classList.toggle('test'); 
