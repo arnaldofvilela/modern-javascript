@@ -1,28 +1,19 @@
-// const content = document.querySelector('p');
+const article = document.querySelector('article');
 
-// console.log(content.classList);
-// content.classList.add('error');
-// content.classList.remove('error');
-// content.classList.add('success');
+// console.log(article.children);
+// console.log(Array.from(article.children));
+// console.log(article.children);
 
+// Array.from(article.children).forEach(child => {
+//     child.classList.add('article-element');
+// });
 
-const paras = document.querySelectorAll('p');
-console.log(paras);
+const title = document.querySelector('h2');
 
-paras.forEach(p => {
-    // all the text that is visible
-    // console.log(p.innerText);
-    // console.log(p.textContent);
+console.log(title.parentElement);
+console.log(title.parentElement.parentElement);
+console.log(title.nextElementSibling);
+console.log(title.previousElementSibling);
 
-if(p.textContent.includes('error')){
-    p.classList.add('error');
-}
-if(p.innerText.includes('success')){
-    p.classList.add('success');
-}
-});
-
-const title = document.querySelector('.title');
-
-title.classList.toggle('test'); 
-title.classList.toggle('test'); 
+// chaining
+console.log(title.nextElementSibling.parentElement.children);
