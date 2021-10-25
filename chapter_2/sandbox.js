@@ -1,18 +1,8 @@
-const copy = document.querySelector('.copy-me');
+const form = document.querySelector('.signup-form');
+// const username = document.querySelector('#username');
 
-copy.addEventListener('copy', () => {
-    console.log('OI! my content is copyright');
-});
-
-const box = document.querySelector('.box');
-
-box.addEventListener('mousemove', e => {
-    // console.log(e);
-    // console.log(e);
-    // console.log(e.offsetX, e.offsety);
-    box.textContent = `x pos - ${e.offsetX} y pos - ${e.offsetY}`;
-}); 
-
-document.addEventListener('wheel', e => {
-    console.log(e.pageX, e.pageY);
+form.addEventListener('submit', e => {
+    e.preventDefault();
+    // console.log(username.value);
+    console.log(form.username.value);
 });
